@@ -1,0 +1,20 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /tijaincms
+
+logging:
+  level:
+    org.springframework: debug
+    com.neusoft.tijaincms: debug
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tijian?characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.neusoft.tijaincms.po,com.neusoft.tijaincms.dto
